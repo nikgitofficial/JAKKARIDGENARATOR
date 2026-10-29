@@ -1,0 +1,1640 @@
+PROJECT EXPORT REPORT
+===========================================
+Path: c:\Users\PC\Downloads\New folder\id-generator
+Date: 10/27/2026, 4:38:40 PM
+===========================================
+
+######### File: .next\dev\build-manifest.json #########
+{
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pagesChunkGroupBootstrapParams": {}
+}
+
+######### File: .next\dev\fallback-build-manifest.json #########
+{
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pagesChunkGroupBootstrapParams": {}
+}
+
+######### File: .next\dev\package.json #########
+{
+  "type": "commonjs"
+}
+
+######### File: .next\dev\prerender-manifest.json #########
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": []
+}
+
+######### File: .next\dev\routes-manifest.json #########
+{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"priority":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[],"onMatchHeaders":[]}
+
+######### File: .next\dev\server\app-paths-manifest.json #########
+{}
+
+######### File: .next\dev\server\interception-route-rewrite-manifest.js #########
+self.__INTERCEPTION_ROUTE_REWRITE_MANIFEST="[]";
+
+######### File: .next\dev\server\middleware-build-manifest.js #########
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pagesChunkGroupBootstrapParams": {}
+};
+
+
+######### File: .next\dev\server\middleware-manifest.json #########
+{
+  "version": 3,
+  "middleware": {},
+  "sortedMiddleware": [],
+  "functions": {}
+}
+
+######### File: .next\dev\server\next-font-manifest.js #########
+self.__NEXT_FONT_MANIFEST="{\n  \"app\": {},\n  \"appUsingSizeAdjust\": false,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"
+
+######### File: .next\dev\server\next-font-manifest.json #########
+{
+  "app": {},
+  "appUsingSizeAdjust": false,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
+
+######### File: .next\dev\server\pages-manifest.json #########
+{}
+
+######### File: .next\dev\server\preview-props.json #########
+{
+  "previewModeId": "ab8593a9f79b91707eaf373cd2059b6b",
+  "previewModeSigningKey": "79b8c6db4f64b260f2206602669de451c7f20a01778f227a4becc096d80f60c7",
+  "previewModeEncryptionKey": "d9982304d7749fa29e72b6d41c71da49e6810b4bf3cab601295ffea6e99db80f"
+}
+
+######### File: .next\dev\server\server-reference-manifest.js #########
+self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"y4KKQQ6JZoTWjA3HIzBDm1uy4y5RkASysJOgn6NMGPs=\"\n}"
+
+######### File: .next\dev\server\server-reference-manifest.json #########
+{
+  "node": {},
+  "edge": {},
+  "encryptionKey": "y4KKQQ6JZoTWjA3HIzBDm1uy4y5RkASysJOgn6NMGPs="
+}
+
+######### File: .next\dev\static\development\_buildManifest.js #########
+self.__BUILD_MANIFEST = {
+  "__rewrites": {
+    "afterFiles": [],
+    "beforeFiles": [],
+    "fallback": []
+  },
+  "sortedPages": [
+    "/_app",
+    "/_error"
+  ]
+};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
+
+######### File: .next\dev\static\development\_clientMiddlewareManifest.js #########
+self.__MIDDLEWARE_MATCHERS = [];self.__MIDDLEWARE_MATCHERS_CB && self.__MIDDLEWARE_MATCHERS_CB()
+
+######### File: .next\dev\static\development\_ssgManifest.js #########
+self.__SSG_MANIFEST=new Set;self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
+
+######### File: .next\dev\types\cache-life.d.ts #########
+// Type definitions for Next.js cacheLife configs
+
+export {}
+
+declare module 'next/cache' {
+  export interface CacheLifeProfiles {
+    "default": true
+    "seconds": true
+    "minutes": true
+    "hours": true
+    "days": true
+    "weeks": true
+    "max": true
+  }
+  
+    /**
+     * Cache this `"use cache"` for a timespan defined by the `"default"` profile.
+     * ```
+     *   stale:      300 seconds (5 minutes)
+     *   revalidate: 900 seconds (15 minutes)
+     *   expire:     never
+     * ```
+     * 
+     * This cache may be stale on clients for 5 minutes before checking with the server.
+     * If the server receives a new request after 15 minutes, start revalidating new values in the background.
+     * It lives for the maximum age of the server cache. If this entry has no traffic for a while, it may serve an old value the next request.
+     */
+    export function cacheLife(profile: "default"): void
+    
+    /**
+     * Cache this `"use cache"` for a timespan defined by the `"seconds"` profile.
+     * ```
+     *   stale:      30 seconds
+     *   revalidate: 1 seconds
+     *   expire:     60 seconds (1 minute)
+     * ```
+     * 
+     * This cache may be stale on clients for 30 seconds before checking with the server.
+     * If the server receives a new request after 1 seconds, start revalidating new values in the background.
+     * If this entry has no traffic for 1 minute it will expire. The next request will recompute it.
+     */
+    export function cacheLife(profile: "seconds"): void
+    
+    /**
+     * Cache this `"use cache"` for a timespan defined by the `"minutes"` profile.
+     * ```
+     *   stale:      300 seconds (5 minutes)
+     *   revalidate: 60 seconds (1 minute)
+     *   expire:     3600 seconds (1 hour)
+     * ```
+     * 
+     * This cache may be stale on clients for 5 minutes before checking with the server.
+     * If the server receives a new request after 1 minute, start revalidating new values in the background.
+     * If this entry has no traffic for 1 hour it will expire. The next request will recompute it.
+     */
+    export function cacheLife(profile: "minutes"): void
+    
+    /**
+     * Cache this `"use cache"` for a timespan defined by the `"hours"` profile.
+     * ```
+     *   stale:      300 seconds (5 minutes)
+     *   revalidate: 3600 seconds (1 hour)
+     *   expire:     86400 seconds (1 day)
+     * ```
+     * 
+     * This cache may be stale on clients for 5 minutes before checking with the server.
+     * If the server receives a new request after 1 hour, start revalidating new values in the background.
+     * If this entry has no traffic for 1 day it will expire. The next request will recompute it.
+     */
+    export function cacheLife(profile: "hours"): void
+    
+    /**
+     * Cache this `"use cache"` for a timespan defined by the `"days"` profile.
+     * ```
+     *   stale:      300 seconds (5 minutes)
+     *   revalidate: 86400 seconds (1 day)
+     *   expire:     604800 seconds (1 week)
+     * ```
+     * 
+     * This cache may be stale on clients for 5 minutes before checking with the server.
+     * If the server receives a new request after 1 day, start revalidating new values in the background.
+     * If this entry has no traffic for 1 week it will expire. The next request will recompute it.
+     */
+    export function cacheLife(profile: "days"): void
+    
+    /**
+     * Cache this `"use cache"` for a timespan defined by the `"weeks"` profile.
+     * ```
+     *   stale:      300 seconds (5 minutes)
+     *   revalidate: 604800 seconds (1 week)
+     *   expire:     2592000 seconds (1 month)
+     * ```
+     * 
+     * This cache may be stale on clients for 5 minutes before checking with the server.
+     * If the server receives a new request after 1 week, start revalidating new values in the background.
+     * If this entry has no traffic for 1 month it will expire. The next request will recompute it.
+     */
+    export function cacheLife(profile: "weeks"): void
+    
+    /**
+     * Cache this `"use cache"` for a timespan defined by the `"max"` profile.
+     * ```
+     *   stale:      300 seconds (5 minutes)
+     *   revalidate: 2592000 seconds (1 month)
+     *   expire:     31536000 seconds (365 days)
+     * ```
+     * 
+     * This cache may be stale on clients for 5 minutes before checking with the server.
+     * If the server receives a new request after 1 month, start revalidating new values in the background.
+     * If this entry has no traffic for 365 days it will expire. The next request will recompute it.
+     */
+    export function cacheLife(profile: "max"): void
+    
+}
+
+
+######### File: .next\dev\types\root-params.d.ts #########
+// Type definitions for Next.js root params (next/root-params)
+// No root params detected.
+export {}
+
+
+######### File: .next\dev\types\routes.d.ts #########
+// This file is generated automatically by Next.js
+// Do not edit this file manually
+
+type AppRoutes = "/"
+type PageRoutes = never
+type LayoutRoutes = "/"
+type RedirectRoutes = never
+type RewriteRoutes = never
+type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
+
+
+interface ParamMap {
+  "/": {}
+}
+
+
+export type ParamsOf<Route extends Routes> = ParamMap[Route]
+
+interface LayoutSlotMap {
+  "/": never
+}
+
+
+export type { AppRoutes, PageRoutes, LayoutRoutes, RedirectRoutes, RewriteRoutes, ParamMap }
+
+declare global {
+  /**
+   * Props for Next.js App Router page components
+   * @example
+   * ```tsx
+   * export default function Page(props: PageProps<'/blog/[slug]'>) {
+   *   const { slug } = await props.params
+   *   return <div>Blog post: {slug}</div>
+   * }
+   * ```
+   */
+  interface PageProps<AppRoute extends AppRoutes> {
+    params: Promise<ParamMap[AppRoute]>
+    searchParams: Promise<Record<string, string | string[] | undefined>>
+  }
+
+  /**
+   * Props for Next.js App Router layout components
+   * @example
+   * ```tsx
+   * export default function Layout(props: LayoutProps<'/dashboard'>) {
+   *   return <div>{props.children}</div>
+   * }
+   * ```
+   */
+  type LayoutProps<LayoutRoute extends LayoutRoutes> = {
+    params: Promise<ParamMap[LayoutRoute]>
+    children: React.ReactNode
+  } & {
+    [K in LayoutSlotMap[LayoutRoute]]: React.ReactNode
+  }
+}
+
+
+######### File: .next\dev\types\validator.ts #########
+// This file is generated automatically by Next.js
+// Do not edit this file manually
+// This file validates that all pages and layouts export the correct types
+
+import type { AppRoutes, LayoutRoutes, ParamMap } from "./routes.js"
+import type { ResolvingMetadata, ResolvingViewport } from "next/types.js"
+
+type ParamMatchFragment<Route extends keyof ParamMap> = Partial<Record<keyof ParamMap[Route], string>>
+type ParamMatchingExports<Route extends keyof ParamMap> =
+  | { unstable_paramMatching?: ParamMatchFragment<Route>; unstable_generateParamMatching?: never }
+  | { unstable_paramMatching?: never; unstable_generateParamMatching?: () => Promise<ParamMatchFragment<Route>> | ParamMatchFragment<Route> }
+
+type AppPageConfig<Route extends AppRoutes = AppRoutes> = {
+  default: React.ComponentType<{ params: Promise<ParamMap[Route]> } & any> | ((props: { params: Promise<ParamMap[Route]> } & any) => React.ReactNode | Promise<React.ReactNode> | never | void | Promise<void>)
+  generateStaticParams?: (props: { params: ParamMap[Route] }) => Promise<any[]> | any[]
+  generateMetadata?: (
+    props: { params: Promise<ParamMap[Route]> } & any,
+    parent: ResolvingMetadata
+  ) => Promise<any> | any
+  generateViewport?: (
+    props: { params: Promise<ParamMap[Route]> } & any,
+    parent: ResolvingViewport
+  ) => Promise<any> | any
+  metadata?: any
+  viewport?: any
+} & ParamMatchingExports<Route>
+
+type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
+  default: React.ComponentType<LayoutProps<Route>> | ((props: LayoutProps<Route>) => React.ReactNode | Promise<React.ReactNode> | never | void | Promise<void>)
+  generateStaticParams?: (props: { params: ParamMap[Route] }) => Promise<any[]> | any[]
+  generateMetadata?: (
+    props: { params: Promise<ParamMap[Route]> } & any,
+    parent: ResolvingMetadata
+  ) => Promise<any> | any
+  generateViewport?: (
+    props: { params: Promise<ParamMap[Route]> } & any,
+    parent: ResolvingViewport
+  ) => Promise<any> | any
+  metadata?: any
+  viewport?: any
+} & ParamMatchingExports<Route>
+
+
+// Validate ../../../app/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
+  const handler = {} as typeof import("../../../app/page.js")
+  type __Check = __IsExpected<typeof handler>
+  
+  type __ParamMatchingValue =
+    typeof handler extends { unstable_paramMatching: infer Matcher } ? Matcher :
+    typeof handler extends { unstable_generateParamMatching: (...args: any[]) => infer Matcher } ? Awaited<Matcher> : {}
+  type __InvalidParamMatchingKeys = Exclude<keyof __ParamMatchingValue, keyof ParamMap["/"]>
+  type __AssertNoInvalidParamMatchingKeys<Invalid extends never> = Invalid
+  const __paramMatchingKeyCheck: __AssertNoInvalidParamMatchingKeys<__InvalidParamMatchingKeys> | undefined = undefined
+  void __paramMatchingKeyCheck
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+
+
+
+
+
+
+// Validate ../../../app/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/">> = Specific
+  const handler = {} as typeof import("../../../app/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  
+  type __ParamMatchingValue =
+    typeof handler extends { unstable_paramMatching: infer Matcher } ? Matcher :
+    typeof handler extends { unstable_generateParamMatching: (...args: any[]) => infer Matcher } ? Awaited<Matcher> : {}
+  type __InvalidParamMatchingKeys = Exclude<keyof __ParamMatchingValue, keyof ParamMap["/"]>
+  type __AssertNoInvalidParamMatchingKeys<Invalid extends never> = Invalid
+  const __paramMatchingKeyCheck: __AssertNoInvalidParamMatchingKeys<__InvalidParamMatchingKeys> | undefined = undefined
+  void __paramMatchingKeyCheck
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+
+######### File: app\globals.css #########
+:root {
+  --bg: #f4f4f6;
+  --panel: #ffffff;
+  --ink: #1b1c20;
+  --muted: #62646c;
+  --line: #dcdde2;
+  --accent: #b3121c;
+  --accent-ink: #ffffff;
+  --err: #b3261e;
+  --ok: #1d6b3a;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: light; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.shell { max-width: 1100px; margin: 0 auto; padding: 24px 20px 56px; }
+
+.top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.eyebrow { margin: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h1 { margin: 2px 0 0; font-size: 26px; line-height: 1.2; }
+.privacy { margin: 0; color: var(--muted); font-size: 13px; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+
+.form { display: grid; gap: 16px; }
+
+fieldset {
+  margin: 0; padding: 16px 16px 18px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  min-width: 0;
+}
+legend { padding: 0 6px; font-weight: 600; font-size: 13px; color: var(--muted); }
+
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 14px; }
+.field { display: grid; gap: 4px; align-content: start; min-width: 0; }
+.field.wide { grid-column: 1 / -1; }
+.field > span { font-size: 13px; font-weight: 500; }
+.field > span b { color: var(--accent); }
+.field small { color: var(--muted); font-size: 12px; }
+
+input[type="text"], input[type="date"] {
+  width: 100%; padding: 9px 10px; font: inherit; color: inherit;
+  background: #fff; border: 1px solid #c4c6cd; border-radius: 8px;
+  text-transform: uppercase;
+}
+input[type="date"] { text-transform: none; }
+input::placeholder { color: #a3a5ad; }
+input:focus-visible, button:focus-visible, .dropzone:focus-within, canvas:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 1px;
+}
+input[aria-invalid="true"] { border-color: var(--err); }
+
+.error { color: var(--err); font-size: 12px; margin: 4px 0 0; }
+.hint { color: var(--muted); font-size: 12.5px; margin: 4px 0 0; }
+.hint.center { text-align: center; }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-primary, .btn-secondary {
+  font: inherit; font-weight: 600; padding: 10px 18px; border-radius: 8px; cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover:not(:disabled) { filter: brightness(1.08); }
+.btn-primary:disabled { opacity: .45; cursor: not-allowed; }
+.btn-secondary { background: #fff; color: var(--ink); border-color: #c4c6cd; }
+.btn-link { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; cursor: pointer; text-decoration: underline; justify-self: start; }
+
+.status { min-height: 1.4em; margin: 0; font-size: 13.5px; }
+.status.ok { color: var(--ok); }
+.status.error { color: var(--err); }
+
+.photo-field { display: grid; gap: 8px; justify-items: start; }
+.dropzone {
+  display: grid; gap: 2px; width: 100%; padding: 18px; text-align: center; cursor: pointer;
+  border: 1.5px dashed #b4b6be; border-radius: 10px; background: #fafafb;
+}
+.dropzone input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.dropzone span { font-weight: 600; }
+.dropzone small { color: var(--muted); }
+.photo-edit { width: 220px; max-width: 100%; height: auto; border: 1px solid #c4c6cd; border-radius: 6px; cursor: grab; touch-action: none; }
+.photo-edit:active { cursor: grabbing; }
+.zoom { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.zoom input { width: 160px; accent-color: var(--accent); }
+
+.preview { position: sticky; top: 16px; }
+.paper {
+  background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+}
+
+.card { position: relative; width: 100%; container-type: inline-size; overflow: hidden; user-select: none; }
+.card-bg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.card-photo-empty {
+  position: absolute; display: grid; place-items: center; background: #dfe1e5; color: #8a8d96;
+  font-family: Arial, sans-serif; font-weight: 700; letter-spacing: .1em;
+}
+
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+  .preview { position: static; order: -1; max-width: 340px; margin: 0 auto; width: 100%; }
+}
+@media (max-width: 520px) {
+  .fields { grid-template-columns: 1fr; }
+}
+
+
+######### File: app\layout.tsx #########
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "ID Generator",
+  description: "Fill in employee details and download the ID as a Word document.",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
+
+
+######### File: app\page.tsx #########
+import RegularIdGenerator from "@/components/RegularIdGenerator";
+
+export default function Page() {
+  return <RegularIdGenerator />;
+}
+
+
+######### File: components\CardPreview.tsx #########
+"use client";
+
+import type { CSSProperties } from "react";
+import { BOXES, CROP, EMU_PER_PT, INSET, PHOTO, type Box } from "@/lib/cardGeometry";
+import { computeLines, type FieldKey, type RegularIdData } from "@/lib/regularId";
+
+const FONT = {
+  calibriBold: 'Calibri, Carlito, "Segoe UI", Arial, sans-serif',
+  arial: 'Arial, "Liberation Sans", Arimo, Helvetica, sans-serif',
+  arialBold: 'Arial, "Liberation Sans", Arimo, Helvetica, sans-serif',
+} as const;
+
+const cqw = (emu: number) => `${((emu / CROP.w) * 100).toFixed(4)}cqw`;
+const pctX = (emu: number) => `${((emu / CROP.w) * 100).toFixed(4)}%`;
+const pctY = (emu: number) => `${((emu / CROP.h) * 100).toFixed(4)}%`;
+const pt = (n: number) => cqw(n * EMU_PER_PT);
+
+function boxStyle(b: Box, extra: CSSProperties = {}): CSSProperties {
+  return {
+    position: "absolute",
+    left: pctX(b.x),
+    top: pctY(b.y),
+    width: pctX(b.w),
+    boxSizing: "border-box",
+    padding: `${cqw(45720)} ${cqw(INSET)}`,
+    whiteSpace: "nowrap",
+    ...extra,
+  };
+}
+
+type Props = { data: RegularIdData; photoUrl: string | null };
+
+export default function CardPreview({ data, photoUrl }: Props) {
+  const L = computeLines(data);
+
+  const line = (
+    key: FieldKey,
+    opts: { font: keyof typeof FONT; color?: string; minLinePt?: number; lineHeight?: string },
+  ): CSSProperties => ({
+    fontFamily: FONT[opts.font],
+    fontWeight: opts.font === "arial" ? 400 : 700,
+    fontSize: pt(L[key].sizePt),
+    color: opts.color,
+    lineHeight: opts.lineHeight ?? "normal",
+    minHeight: opts.minLinePt ? pt(opts.minLinePt) : undefined,
+  });
+
+  const valueKeys: FieldKey[] = ["dateHired", "sss", "tin", "hdmf", "phic", "birthdate", "addressLine1"];
+
+  return (
+    <div
+      className="card"
+      style={{ aspectRatio: `${CROP.w} / ${CROP.h}` }}
+      role="img"
+      aria-label="Live preview of the employee ID card (front on top, back below)"
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="card-bg" src="/card/regular-blank.png" alt="" draggable={false} />
+
+      {photoUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          alt=""
+          src={photoUrl}
+          draggable={false}
+          style={{
+            position: "absolute",
+            left: pctX(PHOTO.x),
+            top: pctY(PHOTO.y),
+            width: pctX(PHOTO.w),
+            height: pctY(PHOTO.h),
+            objectFit: "cover",
+          }}
+        />
+      ) : (
+        <div
+          className="card-photo-empty"
+          style={{
+            left: pctX(PHOTO.x),
+            top: pctY(PHOTO.y),
+            width: pctX(PHOTO.w),
+            height: pctY(PHOTO.h),
+            fontSize: pt(7),
+          }}
+        >
+          PHOTO
+        </div>
+      )}
+
+      {/* Front */}
+      <div style={boxStyle(BOXES.name)}>
+        <div style={line("name", { font: "calibriBold", lineHeight: "normal" })}>{L.name.text}</div>
+      </div>
+      <div style={boxStyle(BOXES.designation)}>
+        <div style={line("designation", { font: "calibriBold", lineHeight: "normal" })}>{L.designation.text}</div>
+      </div>
+      <div style={boxStyle(BOXES.baseBranch)}>
+        <div style={line("baseBranch", { font: "calibriBold", lineHeight: "normal" })}>{L.baseBranch.text}</div>
+      </div>
+      <div style={boxStyle(BOXES.employeeNo)}>
+        <div style={line("employeeNo", { font: "arialBold", lineHeight: "normal" })}>{L.employeeNo.text}</div>
+      </div>
+
+      {/* Back */}
+      <div style={boxStyle(BOXES.values)}>
+        {valueKeys.map((k) => (
+          <div key={k} style={line(k, { font: "arial", minLinePt: 9 })}>
+            {L[k].text || " "}
+          </div>
+        ))}
+      </div>
+      <div style={boxStyle(BOXES.addressLine2, { textAlign: "center" })}>
+        <div style={line("addressLine2", { font: "arial", minLinePt: 9 })}>{L.addressLine2.text}</div>
+      </div>
+      <div style={boxStyle(BOXES.emergency, { textAlign: "center" })}>
+        {(["emergencyName", "emergencyPhone"] as FieldKey[]).map((k) => (
+          <div key={k} style={line(k, { font: "arialBold", color: "#fff", minLinePt: 9 })}>
+            {L[k].text || " "}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+######### File: components\PhotoField.tsx #########
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import { PHOTO_ASPECT } from "@/lib/cardGeometry";
+
+export type Photo = { bytes: Uint8Array; url: string };
+
+const EXPORT_W = 480;
+const EXPORT_H = Math.round(EXPORT_W / PHOTO_ASPECT);
+const EDIT_W = 220;
+const EDIT_H = Math.round(EDIT_W / PHOTO_ASPECT);
+
+type View = { zoom: number; ox: number; oy: number }; // offsets in fractions of the frame
+
+function draw(canvas: HTMLCanvasElement, img: HTMLImageElement, v: View) {
+  const ctx = canvas.getContext("2d")!;
+  const cw = canvas.width;
+  const ch = canvas.height;
+  const base = Math.max(cw / img.naturalWidth, ch / img.naturalHeight);
+  const s = base * v.zoom;
+  const w = img.naturalWidth * s;
+  const h = img.naturalHeight * s;
+  // keep the image covering the frame
+  const maxX = (w - cw) / 2;
+  const maxY = (h - ch) / 2;
+  const dx = (cw - w) / 2 + Math.max(-maxX, Math.min(maxX, v.ox * cw));
+  const dy = (ch - h) / 2 + Math.max(-maxY, Math.min(maxY, v.oy * ch));
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(0, 0, cw, ch);
+  ctx.imageSmoothingQuality = "high";
+  ctx.drawImage(img, dx, dy, w, h);
+}
+
+function clampView(img: HTMLImageElement, v: View): View {
+  const base = Math.max(EDIT_W / img.naturalWidth, EDIT_H / img.naturalHeight);
+  const s = base * v.zoom;
+  const mx = (img.naturalWidth * s - EDIT_W) / 2 / EDIT_W;
+  const my = (img.naturalHeight * s - EDIT_H) / 2 / EDIT_H;
+  return { zoom: v.zoom, ox: Math.max(-mx, Math.min(mx, v.ox)), oy: Math.max(-my, Math.min(my, v.oy)) };
+}
+
+export default function PhotoField({ onChange }: { onChange: (p: Photo | null) => void }) {
+  const [img, setImg] = useState<HTMLImageElement | null>(null);
+  const [view, setView] = useState<View>({ zoom: 1, ox: 0, oy: 0 });
+  const [error, setError] = useState("");
+  const editRef = useRef<HTMLCanvasElement>(null);
+  const drag = useRef<{ x: number; y: number; ox: number; oy: number } | null>(null);
+  const lastUrl = useRef<string | null>(null);
+
+  const emit = useCallback(
+    (image: HTMLImageElement, v: View) => {
+      const out = document.createElement("canvas");
+      out.width = EXPORT_W;
+      out.height = EXPORT_H;
+      draw(out, image, v);
+      out.toBlob(async (blob) => {
+        if (!blob) return;
+        if (lastUrl.current) URL.revokeObjectURL(lastUrl.current);
+        const url = URL.createObjectURL(blob);
+        lastUrl.current = url;
+        onChange({ bytes: new Uint8Array(await blob.arrayBuffer()), url });
+      }, "image/png");
+    },
+    [onChange],
+  );
+
+  // Redraw the editor and (debounced) re-export whenever the framing changes.
+  useEffect(() => {
+    if (!img || !editRef.current) return;
+    draw(editRef.current, img, view);
+    const t = setTimeout(() => emit(img, view), 120);
+    return () => clearTimeout(t);
+  }, [img, view, emit]);
+
+  useEffect(
+    () => () => {
+      if (lastUrl.current) URL.revokeObjectURL(lastUrl.current);
+    },
+    [],
+  );
+
+  function load(file: File | undefined) {
+    if (!file) return;
+    setError("");
+    const src = URL.createObjectURL(file);
+    const image = new Image();
+    image.onload = () => {
+      URL.revokeObjectURL(src);
+      setImg(image);
+      setView({ zoom: 1, ox: 0, oy: 0 });
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(src);
+      setError("That image couldn't be read. Please use a JPG or PNG file.");
+    };
+    image.src = src;
+  }
+
+  function remove() {
+    setImg(null);
+    setError("");
+    if (lastUrl.current) URL.revokeObjectURL(lastUrl.current);
+    lastUrl.current = null;
+    onChange(null);
+  }
+
+  return (
+    <div className="photo-field">
+      {img ? (
+        <>
+          <canvas
+            ref={editRef}
+            width={EDIT_W}
+            height={EDIT_H}
+            className="photo-edit"
+            aria-label="Drag to reposition the photo"
+            onPointerDown={(e) => {
+              e.currentTarget.setPointerCapture(e.pointerId);
+              drag.current = { x: e.clientX, y: e.clientY, ox: view.ox, oy: view.oy };
+            }}
+            onPointerMove={(e) => {
+              const d = drag.current;
+              if (!d || !img) return;
+              const r = e.currentTarget.getBoundingClientRect();
+              setView((v) =>
+                clampView(img, {
+                  zoom: v.zoom,
+                  ox: d.ox + (e.clientX - d.x) / r.width,
+                  oy: d.oy + (e.clientY - d.y) / r.height,
+                }),
+              );
+            }}
+            onPointerUp={() => (drag.current = null)}
+            onPointerCancel={() => (drag.current = null)}
+          />
+          <label className="zoom">
+            <span>Zoom</span>
+            <input
+              type="range"
+              min={1}
+              max={3}
+              step={0.01}
+              value={view.zoom}
+              onChange={(e) => setView((v) => clampView(img, { ...v, zoom: Number(e.target.value) }))}
+            />
+          </label>
+          <p className="hint">Drag the photo to reposition it.</p>
+          <button type="button" className="btn-link" onClick={remove}>
+            Remove photo
+          </button>
+        </>
+      ) : (
+        <label className="dropzone">
+          <input type="file" accept="image/png,image/jpeg,image/webp" onChange={(e) => load(e.target.files?.[0])} />
+          <span>Choose a photo</span>
+          <small>JPG or PNG · cropped to the ID frame</small>
+        </label>
+      )}
+      {error && (
+        <p className="error" role="alert">
+          {error}
+        </p>
+      )}
+    </div>
+  );
+}
+
+
+######### File: components\RegularIdGenerator.tsx #########
+"use client";
+
+import { useMemo, useState } from "react";
+import CardPreview from "./CardPreview";
+import PhotoField, { type Photo } from "./PhotoField";
+import {
+  EMPTY_DATA,
+  computeLines,
+  fileNameFor,
+  fillRegularTemplate,
+  type FieldKey,
+  type RegularIdData,
+} from "@/lib/regularId";
+
+const digits = (s: string) => s.replace(/\D/g, "");
+
+/** Apply a 0/1 mask like "XX-XXXXXXX-X" to a run of digits. */
+function mask(s: string, pattern: string) {
+  const d = digits(s);
+  let out = "";
+  let i = 0;
+  for (const ch of pattern) {
+    if (i >= d.length) break;
+    if (ch === "X") out += d[i++];
+    else out += ch;
+  }
+  return out;
+}
+
+const formatters: Partial<Record<FieldKey, (v: string) => string>> = {
+  sss: (v) => (/^[\d-]*$/.test(v) ? mask(v, "XX-XXXXXXX-X") : v),
+  tin: (v) => (/^[\d-]*$/.test(v) ? mask(v, "XXX-XXX-XXX-XXXX") : v),
+  hdmf: (v) => (/^\d*$/.test(v) ? digits(v).slice(0, 12) : v),
+  phic: (v) => (/^\d*$/.test(v) ? digits(v).slice(0, 12) : v),
+  emergencyPhone: (v) => (/^[\d ]*$/.test(v) ? mask(v, "XXXX XXX XXXX") : v),
+};
+
+type FieldDef = {
+  key: FieldKey;
+  label: string;
+  placeholder?: string;
+  type?: "text" | "date";
+  required?: boolean;
+  inputMode?: "numeric" | "tel";
+  hint?: string;
+};
+
+const SECTIONS: { title: string; fields: FieldDef[] }[] = [
+  {
+    title: "Employee",
+    fields: [
+      { key: "name", label: "Full name", placeholder: "JUAN D. DELA CRUZ", required: true },
+      { key: "designation", label: "Designation", placeholder: "ROUTE SALES AGENT", required: true },
+      { key: "baseBranch", label: "Base branch", placeholder: "TAGUM", required: true },
+      { key: "employeeNo", label: "Employee no.", placeholder: "2025016", required: true },
+    ],
+  },
+  {
+    title: "Government IDs & dates",
+    fields: [
+      { key: "dateHired", label: "Date hired", type: "date" },
+      { key: "sss", label: "SSS", placeholder: "09-3581447-1", inputMode: "numeric" },
+      { key: "tin", label: "TIN", placeholder: "389-579-006-0000", inputMode: "numeric" },
+      { key: "hdmf", label: "HDMF (Pag-IBIG)", placeholder: "121166622247", inputMode: "numeric" },
+      { key: "phic", label: "PHIC (PhilHealth)", placeholder: "160507044376", inputMode: "numeric" },
+      { key: "birthdate", label: "Birthdate", type: "date" },
+    ],
+  },
+  {
+    title: "Address",
+    fields: [
+      {
+        key: "addressLine1",
+        label: "Address, line 1",
+        placeholder: "PRK. SAMPAO,",
+        hint: "Sits beside the ADDRESS label — keep it short.",
+      },
+      { key: "addressLine2", label: "Address, line 2", placeholder: "KAPALONG, DAVAO DEL NORTE" },
+    ],
+  },
+  {
+    title: "In case of emergency",
+    fields: [
+      { key: "emergencyName", label: "Contact person", placeholder: "MARIA DELA CRUZ" },
+      { key: "emergencyPhone", label: "Contact number", placeholder: "0910 051 8893", inputMode: "tel" },
+    ],
+  },
+];
+
+export default function RegularIdGenerator() {
+  const [data, setData] = useState<RegularIdData>(EMPTY_DATA);
+  const [photo, setPhoto] = useState<Photo | null>(null);
+  const [photoKey, setPhotoKey] = useState(0); // remounts the photo editor on "Clear"
+  const [busy, setBusy] = useState(false);
+  const [status, setStatus] = useState<{ kind: "ok" | "error"; text: string } | null>(null);
+
+  const lines = useMemo(() => computeLines(data), [data]);
+  const missing = SECTIONS.flatMap((s) => s.fields)
+    .filter((f) => f.required && !data[f.key].trim())
+    .map((f) => f.label);
+
+  function set(key: FieldKey, value: string) {
+    const f = formatters[key];
+    setData((d) => ({ ...d, [key]: f ? f(value) : value.toUpperCase() }));
+    setStatus(null);
+  }
+
+  async function download() {
+    setBusy(true);
+    setStatus(null);
+    try {
+      const res = await fetch("/templates/regular-id.docx");
+      if (!res.ok) throw new Error("Could not load the ID template.");
+      const bytes = await fillRegularTemplate(await res.arrayBuffer(), data, photo?.bytes ?? null);
+      const blob = new Blob([bytes as BlobPart], {
+        type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = fileNameFor(data);
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 10_000);
+      setStatus({ kind: "ok", text: `Downloaded ${fileNameFor(data)}` });
+    } catch (e) {
+      setStatus({ kind: "error", text: e instanceof Error ? e.message : "Something went wrong." });
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  function clearAll() {
+    setData(EMPTY_DATA);
+    setPhoto(null);
+    setPhotoKey((k) => k + 1);
+    setStatus(null);
+  }
+
+  return (
+    <main className="shell">
+      <header className="top">
+        <div>
+          <p className="eyebrow">ID generator</p>
+          <h1>Regular employee ID</h1>
+        </div>
+        <p className="privacy">Everything is made in your browser — nothing is uploaded.</p>
+      </header>
+
+      <div className="grid">
+        <form
+          className="form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (!missing.length) void download();
+          }}
+        >
+          {SECTIONS.map((section) => (
+            <fieldset key={section.title}>
+              <legend>{section.title}</legend>
+              <div className="fields">
+                {section.fields.map((f) => {
+                  const overflow = lines[f.key].overflow;
+                  return (
+                    <label key={f.key} className={`field${f.key === "name" || f.key === "designation" ? " wide" : ""}`}>
+                      <span>
+                        {f.label}
+                        {f.required && <b aria-hidden> *</b>}
+                      </span>
+                      <input
+                        type={f.type ?? "text"}
+                        value={data[f.key]}
+                        placeholder={f.placeholder}
+                        inputMode={f.inputMode}
+                        autoComplete="off"
+                        spellCheck={false}
+                        required={f.required}
+                        aria-invalid={overflow || undefined}
+                        onChange={(e) => set(f.key, e.target.value)}
+                      />
+                      {overflow ? (
+                        <small className="error">Too long for the ID — shorten it or it will wrap.</small>
+                      ) : (
+                        f.hint && <small>{f.hint}</small>
+                      )}
+                    </label>
+                  );
+                })}
+              </div>
+            </fieldset>
+          ))}
+
+          <fieldset>
+            <legend>Photo</legend>
+            <PhotoField key={photoKey} onChange={setPhoto} />
+          </fieldset>
+
+          <div className="actions">
+            <button type="submit" className="btn-primary" disabled={busy || missing.length > 0}>
+              {busy ? "Preparing…" : "Download Word (.docx)"}
+            </button>
+            <button type="button" className="btn-secondary" onClick={clearAll}>
+              Clear form
+            </button>
+          </div>
+          {missing.length > 0 && <p className="hint">Still needed: {missing.join(", ")}.</p>}
+          <p className={`status ${status?.kind ?? ""}`} role="status" aria-live="polite">
+            {status?.text}
+          </p>
+        </form>
+
+        <aside className="preview" aria-label="Preview">
+          <div className="paper">
+            <CardPreview data={data} photoUrl={photo?.url ?? null} />
+          </div>
+          <p className="hint center">Front on top, back below — as printed on the Word page.</p>
+        </aside>
+      </div>
+    </main>
+  );
+}
+
+
+######### File: lib\cardGeometry.ts #########
+// Positions (EMU, 914400 per inch) of the editable boxes on the card, taken from the template's
+// DrawingML. Preview coordinates are relative to the cropped background image
+// (public/card/regular-blank.png: 773x2233 px at 300 dpi), whose top-left sits
+// ORIGIN away from the card's own top-left corner.
+
+export const EMU_PER_PT = 12700;
+export const INSET = 91440;
+
+export const ORIGIN = { x: 91908, y: 92142 };
+export const CROP = { w: Math.round((773 / 300) * 914400), h: Math.round((2233 / 300) * 914400) };
+
+export type Box = { x: number; y: number; w: number };
+const at = (x: number, y: number, w: number): Box => ({ x: x + ORIGIN.x, y: y + ORIGIN.y, w });
+
+export const BOXES = {
+  name: at(102748, 1620649, 2068317),
+  designation: at(102749, 1875615, 1936750),
+  baseBranch: at(93785, 2166956, 1936751),
+  employeeNo: at(93784, 2458297, 888365),
+  values: at(898909, 4343043, 1139916),
+  addressLine2: at(113323, 5183035, 1997800),
+  emergency: at(109695, 5546043, 1945005),
+};
+
+export const PHOTO = {
+  x: 676568 + ORIGIN.x,
+  y: 815500 + ORIGIN.y,
+  w: 836359,
+  h: 839324,
+};
+
+/** Width / height of the photo frame; uploaded photos are cropped to this. */
+export const PHOTO_ASPECT = PHOTO.w / PHOTO.h;
+
+
+######### File: lib\metrics.ts #########
+// Generated from metric-compatible fonts (Carlito ≈ Calibri, Liberation Sans ≈ Arial).
+// Advance widths per 1000 em. Used to fit text inside the fixed ID text boxes.
+
+export type FontKey = "calibriBold" | "arial" | "arialBold";
+
+export const ADVANCE: Record<FontKey, Record<string, number>> = {
+  calibriBold: {" ":226,"!":326,"\"":438,"#":498,"$":507,"%":729,"&":705,"'":233,"(":312,")":312,"*":498,"+":498,",":258,"-":306,".":267,"/":430,"0":507,"1":507,"2":507,"3":507,"4":507,"5":507,"6":507,"7":507,"8":507,"9":507,":":276,";":276,"<":498,"=":498,">":498,"?":463,"@":898,"A":606,"B":561,"C":529,"D":630,"E":488,"F":459,"G":637,"H":631,"I":267,"J":331,"K":547,"L":423,"M":874,"N":659,"O":676,"P":532,"Q":686,"R":563,"S":473,"T":495,"U":653,"V":591,"W":906,"X":551,"Y":520,"Z":478,"[":325,"\\":430,"]":325,"^":498,"_":498,"`":300,"a":494,"b":537,"c":418,"d":537,"e":503,"f":316,"g":474,"h":537,"i":246,"j":255,"k":480,"l":246,"m":813,"n":537,"o":538,"p":537,"q":537,"r":355,"s":399,"t":347,"u":537,"v":473,"w":745,"x":459,"y":474,"z":397,"{":344,"|":475,"}":344,"~":498,"Ñ":659,"ñ":537,"Á":606,"É":488,"Í":267,"Ó":676,"Ú":653,"Ü":653,"á":494,"é":503,"í":246,"ó":538,"ú":537,"ü":537},
+  arial: {" ":278,"!":278,"\"":355,"#":556,"$":556,"%":889,"&":667,"'":191,"(":333,")":333,"*":389,"+":584,",":278,"-":333,".":278,"/":278,"0":556,"1":556,"2":556,"3":556,"4":556,"5":556,"6":556,"7":556,"8":556,"9":556,":":278,";":278,"<":584,"=":584,">":584,"?":556,"@":1015,"A":667,"B":667,"C":722,"D":722,"E":667,"F":611,"G":778,"H":722,"I":278,"J":500,"K":667,"L":556,"M":833,"N":722,"O":778,"P":667,"Q":778,"R":722,"S":667,"T":611,"U":722,"V":667,"W":944,"X":667,"Y":667,"Z":611,"[":278,"\\":278,"]":278,"^":469,"_":556,"`":333,"a":556,"b":556,"c":500,"d":556,"e":556,"f":278,"g":556,"h":556,"i":222,"j":222,"k":500,"l":222,"m":833,"n":556,"o":556,"p":556,"q":556,"r":333,"s":500,"t":278,"u":556,"v":500,"w":722,"x":500,"y":500,"z":500,"{":334,"|":260,"}":334,"~":584,"Ñ":722,"ñ":556,"Á":667,"É":667,"Í":278,"Ó":778,"Ú":722,"Ü":722,"á":556,"é":556,"í":278,"ó":556,"ú":556,"ü":556},
+  arialBold: {" ":278,"!":333,"\"":474,"#":556,"$":556,"%":889,"&":722,"'":238,"(":333,")":333,"*":389,"+":584,",":278,"-":333,".":278,"/":278,"0":556,"1":556,"2":556,"3":556,"4":556,"5":556,"6":556,"7":556,"8":556,"9":556,":":333,";":333,"<":584,"=":584,">":584,"?":611,"@":975,"A":722,"B":722,"C":722,"D":722,"E":667,"F":611,"G":778,"H":722,"I":278,"J":556,"K":722,"L":611,"M":833,"N":722,"O":778,"P":667,"Q":778,"R":722,"S":667,"T":611,"U":722,"V":667,"W":944,"X":667,"Y":667,"Z":611,"[":333,"\\":278,"]":333,"^":584,"_":556,"`":333,"a":556,"b":611,"c":556,"d":611,"e":556,"f":333,"g":611,"h":611,"i":278,"j":278,"k":556,"l":278,"m":889,"n":611,"o":611,"p":611,"q":611,"r":389,"s":556,"t":333,"u":611,"v":556,"w":778,"x":556,"y":556,"z":500,"{":389,"|":280,"}":389,"~":584,"Ñ":722,"ñ":611,"Á":722,"É":667,"Í":278,"Ó":778,"Ú":722,"Ü":722,"á":556,"é":556,"í":278,"ó":611,"ú":611,"ü":611},
+};
+
+
+######### File: lib\regularId.ts #########
+import JSZip from "jszip";
+import { ADVANCE, type FontKey } from "./metrics.ts";
+
+/* -------------------------------------------------------------------------- */
+/*  Data model                                                                */
+/* -------------------------------------------------------------------------- */
+
+export type RegularIdData = {
+  name: string;
+  designation: string;
+  baseBranch: string;
+  employeeNo: string;
+  dateHired: string; // ISO yyyy-mm-dd
+  sss: string;
+  tin: string;
+  hdmf: string;
+  phic: string;
+  birthdate: string; // ISO yyyy-mm-dd
+  addressLine1: string; // purok / street / barangay (sits beside the ADDRESS label)
+  addressLine2: string; // municipality, province (centred underneath)
+  emergencyName: string;
+  emergencyPhone: string;
+};
+
+export const EMPTY_DATA: RegularIdData = {
+  name: "",
+  designation: "",
+  baseBranch: "",
+  employeeNo: "",
+  dateHired: "",
+  sss: "",
+  tin: "",
+  hdmf: "",
+  phic: "",
+  birthdate: "",
+  addressLine1: "",
+  addressLine2: "",
+  emergencyName: "",
+  emergencyPhone: "",
+};
+
+export type FieldKey = keyof RegularIdData;
+
+/* -------------------------------------------------------------------------- */
+/*  Text boxes on the card: font, size range and usable width                 */
+/*  (values measured from the template's DrawingML; 12700 EMU = 1 pt)         */
+/* -------------------------------------------------------------------------- */
+
+const EMU_PT = 12700;
+const INSET = 91440 * 2; // left + right text-box inset
+
+type Fit = { font: FontKey; basePt: number; minPt: number; innerPt: number };
+
+const fit = (font: FontKey, basePt: number, minPt: number, boxEmu: number): Fit => ({
+  font,
+  basePt,
+  minPt,
+  innerPt: (boxEmu - INSET) / EMU_PT,
+});
+
+export const FIT: Record<FieldKey, Fit> = {
+  name: fit("calibriBold", 12, 8, 2068317),
+  designation: fit("calibriBold", 11, 7, 1936750),
+  baseBranch: fit("calibriBold", 10, 7, 1936751),
+  employeeNo: fit("arialBold", 10, 7, 888365),
+  dateHired: fit("arial", 7.5, 6, 1139916),
+  sss: fit("arial", 8, 6, 1139916),
+  tin: fit("arial", 8, 6, 1139916),
+  hdmf: fit("arial", 8, 6, 1139916),
+  phic: fit("arial", 8, 6, 1139916),
+  birthdate: fit("arial", 8, 6, 1139916),
+  addressLine1: fit("arial", 8, 6, 1139916),
+  addressLine2: fit("arial", 7, 5.5, 1997800),
+  emergencyName: fit("arialBold", 9, 6.5, 1945005),
+  emergencyPhone: fit("arialBold", 9, 6.5, 1945005),
+};
+
+export function textWidthPt(text: string, font: FontKey, sizePt: number): number {
+  const table = ADVANCE[font];
+  let units = 0;
+  for (const ch of text) units += table[ch] ?? 600;
+  return (units * sizePt) / 1000;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Normalising user input                                                    */
+/* -------------------------------------------------------------------------- */
+
+const MONTHS = [
+  "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+  "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER",
+];
+
+/** "2025-02-24" -> "FEBRUARY 24, 2025" (no locale/timezone dependence). */
+export function formatDate(iso: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso.trim());
+  if (!m) return "";
+  const month = MONTHS[Number(m[2]) - 1];
+  if (!month) return "";
+  return `${month} ${Number(m[3])}, ${m[1]}`;
+}
+
+export function cleanText(s: string): string {
+  // eslint-disable-next-line no-control-regex
+  return s.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().toUpperCase();
+}
+
+export function displayText(key: FieldKey, data: RegularIdData): string {
+  if (key === "dateHired" || key === "birthdate") return formatDate(data[key]);
+  return cleanText(data[key]);
+}
+
+export type Line = {
+  text: string;
+  sizePt: number;
+  /** Half-points, as stored in w:sz */
+  halfPts: number;
+  /** True when the text still does not fit at the smallest allowed size. */
+  overflow: boolean;
+};
+
+export function fitLine(key: FieldKey, text: string): Line {
+  const f = FIT[key];
+  let size = f.basePt;
+  while (size > f.minPt && textWidthPt(text, f.font, size) > f.innerPt) size -= 0.5;
+  const overflow = textWidthPt(text, f.font, size) > f.innerPt;
+  return { text, sizePt: size, halfPts: Math.round(size * 2), overflow };
+}
+
+export function computeLines(data: RegularIdData): Record<FieldKey, Line> {
+  const out = {} as Record<FieldKey, Line>;
+  (Object.keys(FIT) as FieldKey[]).forEach((k) => {
+    out[k] = fitLine(k, displayText(k, data));
+  });
+  return out;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Filling the Word template                                                 */
+/*                                                                            */
+/*  The card is a DrawingML group (with a VML fallback copy). Its 16 text     */
+/*  boxes appear in the same order in both copies, so we patch box N in each. */
+/* -------------------------------------------------------------------------- */
+
+const TEXTBOXES_PER_COPY = 16;
+
+/** Index of each text box inside the template. */
+const BOX = {
+  addressLine2: 0,
+  values: 2,
+  emergency: 3,
+  name: 12,
+  designation: 13,
+  baseBranch: 14,
+  employeeNo: 15,
+} as const;
+
+const VALUE_ORDER: FieldKey[] = [
+  "dateHired",
+  "sss",
+  "tin",
+  "hdmf",
+  "phic",
+  "birthdate",
+  "addressLine1",
+];
+
+const esc = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+function setSize(rPr: string, halfPts: number): string {
+  const size = `<w:sz w:val="${halfPts}"/><w:szCs w:val="${halfPts}"/>`;
+  if (!rPr) return `<w:rPr>${size}</w:rPr>`;
+  const stripped = rPr
+    .replace(/<w:sz\s[^>]*\/>/g, "")
+    .replace(/<w:szCs\s[^>]*\/>/g, "");
+  return stripped.replace("</w:rPr>", `${size}</w:rPr>`);
+}
+
+/** Replace a paragraph's text, keeping its paragraph and first-run formatting. */
+function rewriteParagraph(p: string, line: Line, baseHalfPts: number): string {
+  const open = /^<w:p(?:\s[^>]*)?>/.exec(p)?.[0];
+  if (!open || !p.endsWith("</w:p>")) return p;
+  const pPr = /<w:pPr>[\s\S]*?<\/w:pPr>/.exec(p)?.[0] ?? "";
+  const rest = p.slice(open.length, p.length - "</w:p>".length).replace(pPr, "");
+  let rPr = /<w:r(?:\s[^>]*)?>\s*(<w:rPr>[\s\S]*?<\/w:rPr>)/.exec(rest)?.[1] ?? "";
+  if (!rPr) rPr = /<w:rPr>[\s\S]*?<\/w:rPr>/.exec(pPr)?.[0] ?? "";
+  // Only touch the size when the text had to shrink, so untouched boxes stay byte-identical.
+  if (line.halfPts !== baseHalfPts) rPr = setSize(rPr, line.halfPts);
+  return `${open}${pPr}<w:r>${rPr}<w:t xml:space="preserve">${esc(line.text)}</w:t></w:r></w:p>`;
+}
+
+const PARAGRAPH = /<w:p(?:\s[^>]*)?>[\s\S]*?<\/w:p>|<w:p(?:\s[^>]*)?\/>/g;
+
+function rewriteBox(inner: string, keys: FieldKey[], lines: Record<FieldKey, Line>): string {
+  let i = 0;
+  return inner.replace(PARAGRAPH, (p) => {
+    const key = keys[i++];
+    if (!key) return p;
+    return rewriteParagraph(p, lines[key], Math.round(FIT[key].basePt * 2));
+  });
+}
+
+function patchDocumentXml(xml: string, data: RegularIdData): string {
+  const lines = computeLines(data);
+  const plan: Record<number, FieldKey[]> = {
+    [BOX.addressLine2]: ["addressLine2"],
+    [BOX.values]: VALUE_ORDER,
+    [BOX.emergency]: ["emergencyName", "emergencyPhone"],
+    [BOX.name]: ["name"],
+    [BOX.designation]: ["designation"],
+    [BOX.baseBranch]: ["baseBranch"],
+    [BOX.employeeNo]: ["employeeNo"],
+  };
+
+  let count = 0;
+  const patched = xml.replace(
+    /<w:txbxContent>([\s\S]*?)<\/w:txbxContent>/g,
+    (whole, inner: string) => {
+      const idx = count++ % TEXTBOXES_PER_COPY;
+      const keys = plan[idx];
+      if (!keys) return whole;
+      return `<w:txbxContent>${rewriteBox(inner, keys, lines)}</w:txbxContent>`;
+    },
+  );
+  if (count === 0 || count % TEXTBOXES_PER_COPY !== 0) {
+    throw new Error(
+      `Template layout changed: found ${count} text boxes, expected a multiple of ${TEXTBOXES_PER_COPY}.`,
+    );
+  }
+  return patched;
+}
+
+/** The photo is the one picture that sits outside the card group. */
+function findPhotoRelId(xml: string): string {
+  const withoutGroup = xml.replace(/<mc:AlternateContent>[\s\S]*?<\/mc:AlternateContent>/g, "");
+  const m = /<a:blip\s+r:embed="(rId\d+)"/.exec(withoutGroup);
+  if (!m) throw new Error("Template layout changed: photo picture not found.");
+  return m[1];
+}
+
+function replacePhoto(xml: string, relId: string): string {
+  // The template crops the sample photo; the uploaded one is already cropped to the frame.
+  const re = new RegExp(`(<a:blip\\s+r:embed="${relId}"[\\s\\S]*?</a:blip>)<a:srcRect[^>]*/>`);
+  return xml.replace(re, "$1<a:srcRect/>");
+}
+
+async function photoTarget(zip: JSZip, relId: string): Promise<string> {
+  const rels = await zip.file("word/_rels/document.xml.rels")!.async("string");
+  const m = new RegExp(`<Relationship\\s[^>]*Id="${relId}"[^>]*Target="([^"]+)"`).exec(rels)
+    ?? new RegExp(`<Relationship\\s[^>]*Target="([^"]+)"[^>]*Id="${relId}"`).exec(rels);
+  if (!m) throw new Error("Template layout changed: photo relationship not found.");
+  return `word/${m[1]}`;
+}
+
+export async function fillRegularTemplate(
+  template: ArrayBuffer | Uint8Array,
+  data: RegularIdData,
+  photoPng: Uint8Array | null,
+): Promise<Uint8Array> {
+  const zip = await JSZip.loadAsync(template);
+  const docFile = zip.file("word/document.xml");
+  if (!docFile) throw new Error("Not a valid Word template.");
+
+  let xml = patchDocumentXml(await docFile.async("string"), data);
+
+  if (photoPng) {
+    const relId = findPhotoRelId(xml);
+    const target = await photoTarget(zip, relId);
+    xml = replacePhoto(xml, relId);
+    zip.file(target, photoPng);
+  }
+
+  zip.file("word/document.xml", xml);
+  return zip.generateAsync({ type: "uint8array", compression: "DEFLATE" });
+}
+
+export function fileNameFor(data: RegularIdData): string {
+  const base = cleanText(data.name).replace(/[\\/:*?"<>|]+/g, "").trim() || "EMPLOYEE";
+  return `ID - ${base}.docx`;
+}
+
+
+######### File: next-env.d.ts #########
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+import "./.next/dev/types/routes.d.ts";
+import "./.next/dev/types/root-params.d.ts";
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+
+
+######### File: package.json #########
+{
+  "name": "id-generator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "make-template": "node scripts/make-template.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
+}
+
+
+######### File: README.md #########
+# ID Generator — Regular Employee
+
+Type the employee's details, check the live preview, download the ID as a Word file.
+Everything runs in the browser: no server processing, nothing uploaded.
+
+## Run it
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build && npm start
+```
+
+## How it matches your Word file exactly
+
+The app does **not** redraw the card. `public/templates/regular-id.docx` is your original
+`REGULAR ID.docx` with the personal values blanked and the sample photo replaced by a neutral
+placeholder. On download, only the text boxes (and the photo) are filled in, so the layout,
+fonts, crop marks and artwork are byte-for-byte your design. Filling your original file with its own
+values re-renders pixel-identical to the original.
+
+Text that is too long for its box is shrunk automatically (down to a minimum size per field,
+using Calibri/Arial metrics); the form warns when something still won't fit.
+
+## Project layout
+
+| Path | What it is |
+| --- | --- |
+| `lib/regularId.ts` | Data model, text fitting, and the `.docx` filler (JSZip) |
+| `lib/cardGeometry.ts` | Positions of the boxes, used by the preview |
+| `components/` | Form, live preview, photo crop/zoom |
+| `public/templates/regular-id.docx` | Sanitised Word template |
+| `public/card/regular-blank.png` | Blank card render used behind the preview |
+| `scripts/make-template.mjs` | Rebuilds the template from the original Word file |
+
+## If you change the Word design
+
+```bash
+node scripts/make-template.mjs "REGULAR ID.docx" --transparent-photo /tmp/bg.docx
+```
+
+then re-render `/tmp/bg.docx` at 300 dpi (LibreOffice → PDF → PNG), crop to
+`public/card/regular-blank.png`, and re-check `lib/cardGeometry.ts` if boxes moved.
+The filler expects the same 16 text boxes in the same order; it throws a clear error if not.
+
+## Adding the other ID types
+
+Copy `lib/regularId.ts` + `components/RegularIdGenerator.tsx` per type, point them at that type's
+template, and update the box indexes in `BOX`.
+
+
+######### File: settings.json #########
+{
+  "extensions": {
+    ".txt": true,
+    ".js": true,
+    ".ts": true,
+    ".jsx": true,
+    ".tsx": true,
+    ".json": true,
+    ".css": true,
+    ".scss": true,
+    ".html": true,
+    ".xml": true,
+    ".md": true,
+    ".py": true,
+    ".java": true,
+    ".cpp": true,
+    ".h": true,
+    ".c": true,
+    ".cs": true,
+    ".php": true,
+    ".rb": true,
+    ".go": true,
+    ".rs": true,
+    ".sql": true,
+    ".yaml": true,
+    ".yml": true,
+    ".sh": true,
+    ".bat": true,
+    ".ps1": true,
+    ".gradle": true,
+    ".properties": true,
+    ".ini": true,
+    ".cfg": true,
+    ".conf": true,
+    ".vue": true,
+    ".svelte": true
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "dist",
+    "out",
+    "bin",
+    ".git",
+    ".vscode",
+    ".idea",
+    ".gradle",
+    "gradle",
+    "generated",
+    "logs",
+    "crash-reports",
+    ".metadata",
+    ".settings",
+    "eclipse"
+  ],
+  "ignoreFiles": [
+    "package-lock.json",
+    "gradlew",
+    "gradlew.bat",
+    "gradle-wrapper.jar",
+    "gradle-wrapper.properties",
+    ".DS_Store",
+    "Thumbs.db",
+    ".project",
+    ".classpath",
+    ".factorypath",
+    "CREDITS.txt",
+    "LICENSE.txt",
+    "README.txt",
+    "changelog.txt"
+  ],
+  "ignoreExtensions": [
+    ".iml",
+    ".ipr",
+    ".iws",
+    ".class",
+    ".jar",
+    ".log",
+    ".bak",
+    ".svg",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".ico",
+    ".mp3",
+    ".wav",
+    ".ogg",
+    ".mp4",
+    ".avi",
+    ".mov",
+    ".exe",
+    ".dll",
+    ".so",
+    ".dylib",
+    ".zip",
+    ".rar",
+    ".7z",
+    ".tar",
+    ".gz"
+  ]
+}
+
+######### File: tsconfig.json #########
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+

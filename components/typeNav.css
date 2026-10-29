@@ -1,0 +1,9 @@
+/* Type switcher (Regular / Non-regular) */
+.type-nav { max-width: 1100px; margin: 0 auto; padding: 14px 20px 0; display: flex; gap: 6px; }
+.type-nav a {
+  padding: 6px 14px; border-radius: 8px; font-size: 13.5px; font-weight: 600; text-decoration: none;
+  color: var(--muted); border: 1px solid transparent;
+}
+.type-nav a:hover { color: var(--ink); }
+.type-nav a[aria-current="page"] { color: var(--accent); background: var(--panel); border-color: var(--line); }
+.type-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
